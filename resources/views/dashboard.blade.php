@@ -19,5 +19,6 @@
             @livewire('course-management')
             </div>
         </div>
+    </div>
 
 </x-app-layout>
