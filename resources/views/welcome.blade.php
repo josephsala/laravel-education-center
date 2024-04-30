@@ -922,9 +922,9 @@
                             Dashboard
                         </a>
                         @else
-                        <a href="{{ route('login') }}" class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]">
+                        <!-- <a href="{{ route('login') }}" class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]">
                             Entrar
-                        </a>
+                        </a> -->
 
                         <!-- @if (Route::has('register'))
                         <a href="{{ route('register') }}" class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]">
@@ -935,33 +935,40 @@
                     </nav>
                     @endif
                 </header>
+                <main class="flex flex-col items-center justify-center flex-1 px-3 py-16 text-center">
+                    <!-- Encabezado -->
+                    <div class="bg-gray-800 py-6 px-8 text-black">
+                        <h1 class="text-4xl font-extrabold leading-tight">¡Bienvenido al Portal de Aprendizaje!</h1>
+                        <p class="mt-2 text-lg">Accede a recursos educativos innovadores para potenciar tu enseñanza.</p>
+                    </div>                    
+                    <!-- Cuerpo -->
+                    <div class="p-8">
+                        <h2 class="text-2xl font-bold text-gray-800">¿Qué deseas hacer?</h2>
+                        <div class="grid grid-cols-1 gap-6 mt-6 sm:grid-cols-2">
+                            <a href="{{ route('login') }}" class="flex items-center justify-center p-6 bg-gray-100 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                                <svg class="w-12 h-12 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                </svg>
+                                <div class="ml-4 text-left">
+                                    <h3 class="text-lg font-semibold text-gray-800">Iniciar Sesión</h3>
+                                    <p class="mt-2 text-sm text-gray-600">Accede a tu cuenta para disfrutar de los recursos educativos.</p>
+                                </div>
+                            </a>
 
-                <main class="mt-6">
-                    <div class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8">
-                        <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)]">
-                            <img class="size-12" src="https://laravel.com/assets/img/welcome/illustration.svg" alt="Illustration" />
-                            <h2 class="mt-6 text-xl font-semibold text-black">Sistema Educativo Integral</h2>
-                            <p class="mt-4 text-sm text-black">Sistema Educativo Integral con CRM para Profesores y Juegos Didácticos</p>
+                            <a href="{{ route('register') }}" class="flex items-center justify-center p-6 bg-gray-100 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                                <svg class="w-12 h-12 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                </svg>
+                                <div class="ml-4 text-left">
+                                    <h3 class="text-lg font-semibold text-gray-800">Registrarse</h3>
+                                    <p class="mt-2 text-sm text-gray-600">Crea una cuenta para acceder a los recursos educativos.</p>
+                                </div>
+                            </a>
                         </div>
-                        <div class="flex flex-col items-center justify-center p-6 bg-white rounded-lg shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)]">
-                            <img class="size-12" src="https://laravel.com/assets/img/welcome/illustration.svg" alt="Illustration" />
-                            <h2 class="mt-6 text-xl font-semibold text-black">Sistema Educativo Integral</h2>
-                            <p class="mt-4 text-sm text-black">Sistema Educativo Integral con CRM para Profesores y Juegos Didácticos</p>
-                        </div>
                     </div>
 
-                    <div class="flex flex-col items-center justify-center mt-6 p-6 bg-white rounded-lg shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)]">
-                        <img class="size-12" src="https://laravel.com/assets/img/welcome/illustration.svg" alt="Illustration" />
-                        <h2 class="mt-6 text-xl font-semibold text-black">Sistema Educativo Integral</h2>
-                        <p class="mt-4 text-sm text-black">Sistema Educativo Integral con CRM para Profesores y Juegos Didácticos</p>
-                    </div>
-
-                    <div class="flex flex-col items-center justify-center mt-6 p-6 bg-white rounded-lg shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)]">
-                        <img class="size-12" src="https://laravel.com/assets/img/welcome/illustration.svg" alt="Illustration" />
-                        <h2 class="mt-6 text-xl font-semibold text-black">Sistema Educativo Integral</h2>
-                        <p class="mt-4 text-sm text-black">Sistema Educativo Integral con CRM para Profesores y Juegos Didácticos</p>
-                    </div>
                 </main>
+
 
                 <footer class="py-16 text-center text-sm text-black">
                     Sistema Educativo Integral con CRM para Profesores y Juegos Didácticos
