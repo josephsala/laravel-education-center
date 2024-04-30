@@ -1,11 +1,11 @@
 <?php
 
 namespace Database\Seeders;
-
+ 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-
+ 
 class RoleSeeder extends Seeder
 {
     /**
@@ -13,16 +13,19 @@ class RoleSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('role')->insert([
+        DB::table('roles')->insert([
             'name' => 'admin',
+            'guard_name' => 'admin'
         ]);
-
-        DB::table('role')->insert([
-            'name' => 'teacher',
-        ]);
-
-        DB::table('role')->insert([
+ 
+        DB::table('roles')->insert([
             'name' => 'student',
+            'guard_name' => 'student'
+        ]);
+ 
+        DB::table('roles')->insert([
+            'name' => 'teacher',
+            'guard_name' => 'teacher'
         ]);
     }
 }

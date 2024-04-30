@@ -1,7 +1,14 @@
+
 <!-- Contenedor principal -->
 <div class="flex items-center justify-center min-h-screen py-12 bg-gray-100 px-4 sm:px-6 lg:px-8">
+
+    <div class="absolute top-0 right-0 p-4">
+        <span class="text-gray-600">¡Hola, {{ auth()->user()->name }}!</span>
+        <span class="text-gray-600">({{ auth()->user()->role }})</span>
+    </div>
+
     <!-- Contenido -->
-    <div class="max-w-4xl w-full bg-white rounded-lg shadow-xl overflow-hidden">
+    <div class="max-w-4xl w-full bg-white rounded-lg shadow-xl overflow-hidden" >
 
         <!-- Encabezado -->
         <div class="bg-gray-800 py-6 px-8 text-white">
@@ -16,13 +23,17 @@
             <a href="#" class="text-blue-600 font-semibold hover:underline">Conoce más sobre nosotros →</a>
         </div>
 
-        <!-- Gráfico de asistencia de alumnos -->
+        <!-- Gráfico de asistencia de alumnos, solo lo podra ver el admin-->
+        @if (auth()->user()->role === 'admin')
         <div class="bg-gray-200 px-8 py-6">
             <h2 class="text-2xl font-semibold mb-4">Asistencia de Alumnos</h2>
-            <img src="https://via.placeholder.com/1200x600" alt="Gráfico de asistencia" class="w-full rounded-lg shadow-lg mb-4">
+            <!-- <img src="https://via.placeholder.com/1200x600" alt="Gráfico de asistencia" class="w-full rounded-lg shadow-lg mb-4"> -->
+            <img src="https://www.alexiaeducaria.com/wp-content/uploads/video-alexia-portada-vimeo.png" alt="Imagen1" class="w-full rounded-lg shadow-lg mb-4">
             <p class="text-gray-700 leading-relaxed">Visualiza la asistencia de los alumnos en tiempo real y analiza tendencias importantes para mejorar la participación y el rendimiento académico.</p>
             <a href="#" class="text-blue-600 font-semibold hover:underline">Ver detalles de la asistencia →</a>
         </div>
+        @endif
+
 
         <!-- Últimos cursos -->
         <div class="p-8">
