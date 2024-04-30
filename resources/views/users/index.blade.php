@@ -28,6 +28,7 @@ use App\Models\User;
                     <table class="min-w-full divide-y divide-gray-200">
                         <thead>
                             <tr>
+              
                                 <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
                                     Name
                                 </th>
@@ -56,7 +57,17 @@ use App\Models\User;
                                 </td>
                                 <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium">
                                 </td>
+                                <td>
+                                    <a href="{{ route('users.edit', $user->id) }}" class="text-indigo-600 hover:text-indigo-900">Editar</a>
+                                </td>
+                                <td>
+                                    <form action="{{ route('users.destroy', $user->id) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="text-red-600 hover:text-red-900">Eliminar</button>
+                                    </form>
                             </tr>
+
                             @endforeach
                         </tbody>
                     </table>

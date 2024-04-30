@@ -30,4 +30,30 @@ Route::middleware([
         return view('users/index');
     })->name('users');
 
+    Route::get('/users/create', function () {
+        return view('users/create');
+    })->name('users.create');
+
+    Route :: post ( '/users' , function () {
+        return 'Usuario creado';
+    })->name('users.store');
+
+    Route :: put ( '/users/{user}' , function () {
+        return 'Usuario actualizado';
+    })->name('users.update');
+
+
+    Route::get('/users/{user}/edit', function ($user) {
+        return view('users/edit', compact('user'));
+    })->name('users.edit');
+
+    Route::get('/users/{user}/show', function ($user) {
+        return view('users/show', compact('user'));
+    })->name('users.show');
+
+    Route::get('/users/{user}/delete', function ($user) {
+        return view('users/delete', compact('user'));
+    })->name('users.destroy');
+
+
 });
