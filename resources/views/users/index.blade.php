@@ -1,7 +1,12 @@
 <?php
-use App\Models\User;
 
-    $users = User::all(); // Fetch all users from the database
+use App\Models\User;
+use Spatie\Permission\Models\Role;
+use App\Http\Livewire\UserManagement;
+
+$users = User::all();
+$roles = Role::all();
+
 
 
 ?>
@@ -28,7 +33,7 @@ use App\Models\User;
                     <table class="min-w-full divide-y divide-gray-200">
                         <thead>
                             <tr>
-              
+
                                 <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
                                     Name
                                 </th>
@@ -61,18 +66,21 @@ use App\Models\User;
                                     <a href="{{ route('users.edit', $user->id) }}" class="text-indigo-600 hover:text-indigo-900">Editar</a>
                                 </td>
                                 <td>
-                                    <form action="{{ route('users.destroy', $user->id) }}" method="POST">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="text-red-600 hover:text-red-900">Eliminar</button>
-                                    </form>
+                                    <button livewire:click="deleteUser({{ $user->id }})" class="text-indigo-600 hover:text-indigo-900">Eliminar</button>
+                                </td>
+                                
                             </tr>
 
                             @endforeach
                         </tbody>
                     </table>
+
+                </div>
+                <div class="p-6 sm:px-20 bg-white border-b border-gray-200">
+                    <a href="{{ route('register') }}" class="text-indigo-600 hover:text-indigo-900">Añadir nuevo usuario</a>
                 </div>
             </div>
+                
         </div>
     </div>
 </x-app-layout>
