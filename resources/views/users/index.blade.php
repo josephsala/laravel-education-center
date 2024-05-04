@@ -66,9 +66,10 @@ $roles = Role::all();
                                     <a href="{{ route('users.edit', $user->id) }}" class="text-indigo-600 hover:text-indigo-900">Editar</a>
                                 </td>
                                 <td>
-                                    <button livewire:click="deleteUser({{ $user->id }})" class="text-indigo-600 hover:text-indigo-900">Eliminar</button>
+                                                                             
                                 </td>
-                                
+                            
+
                             </tr>
 
                             @endforeach
@@ -79,6 +80,8 @@ $roles = Role::all();
                 <div class="p-6 sm:px-20 bg-white border-b border-gray-200">
                     <a href="{{ route('register') }}" class="text-indigo-600 hover:text-indigo-900">Añadir nuevo usuario</a>
                 </div>
+            </div>
+            <div>
             </div>
                 
         </div>
