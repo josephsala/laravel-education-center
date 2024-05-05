@@ -2,26 +2,27 @@
 
 namespace App\Livewire;
 
-use Livewire\Component;
+use LivewireUI\Modal\ModalComponent;
+use App\Models\User;
 
-class Modal extends Component
+class DeleteUser extends ModalComponent
 {
-    public $showModal = false;
-    public $title = '';
-    public $content = '';
+    public int|User $user;
 
-    public function openModal()
-    {
-        $this->showModal = true;
+    public function mount(User $user) {
+        $this->user = $user;
     }
 
-    public function closeModal()
+    public function delete()
     {
-        $this->showModal = false;
+        $this->user->delete();        
+        $this->closeModal();
+        session()->flash('message', 'User deleted successfully.');
+        return redirect()->route('user-management');
     }
 
     public function render()
     {
-        return view('livewire.modal');
+        return view('livewire.delete-user');
     }
 }
