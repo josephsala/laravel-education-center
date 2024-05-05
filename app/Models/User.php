@@ -9,13 +9,9 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
-use Spatie\Permission\Traits\HasRoles;
-
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable, HasRoles;
-
     use HasApiTokens;
     use HasFactory;
     use HasProfilePhoto;
@@ -29,6 +25,7 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'role',
         'email',
         'password',
     ];
@@ -67,5 +64,18 @@ class User extends Authenticatable
         ];
     }
 
+    public function isStudent()
+    {
+        return $this->role === 'student';
+    }
 
+    public function isAdmin()
+    {
+        return $this->role === 'admin';
+    }
+
+    public function isTeacher()
+    {
+        return $this->role === 'teacher';
+    }
 }

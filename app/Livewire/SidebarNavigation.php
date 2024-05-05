@@ -10,12 +10,11 @@ class SidebarNavigation extends Component
     public function render()
     {
         $userRole = Auth::check() ? Auth::user()->role : null;
-         return view('livewire.sidebar-navigation', [
-         // Utiliza el rol del usuario
-         'isTeacher' => $userRole === 'teacher',
-         'isAdmin' => $userRole === 'admin',
-         'isStudent' => $userRole === 'student',
-         'isParent' => $userRole === 'parent',
-         'isPsychologist' => $userRole === 'psychologist',
-         ]);    }
+
+        return view('livewire.sidebar-navigation', [
+            'isTeacher' => $userRole === 'teacher',
+            'isStudent' => $userRole === 'student',
+            'isAdmin' => $userRole === 'admin'
+        ]);
+    }
 }
