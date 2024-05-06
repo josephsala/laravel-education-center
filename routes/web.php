@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Livewire\UserManagement;
+use App\Livewire\CourseManagement;
 
 Route::get('/', function () {
     return view('welcome');
@@ -19,4 +20,6 @@ Route::middleware([
 
     // User Management
     Route::get('/user-management', UserManagement::class)->name('user-management');
+    //Course Management
+    Route::get('/course-management', CourseManagement::class)->name('course-management');
 });

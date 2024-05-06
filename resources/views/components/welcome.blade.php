@@ -17,7 +17,7 @@
             <p class="mt-2 text-lg">Eres, Estudiante! Explora los cursos disponibles y comienza a aprender nuevas habilidades.</p>
             @endif
         </div>
-        <!-- Crear un nuevo curso
+        <!-- Crear un nuevo curso -->
         @if (auth()->user()->role === 'admin' || auth()->user()->role === 'teacher')
         <div class="p-8">
             <h2 class="text-2xl font-semibold mb-4">Crea un nuevo curso</h2>
@@ -38,7 +38,7 @@
                 </div>
             </form>
         </div>
-        @endif -->
+        @endif
 
         <!-- Últimos cursos -->
         <div class="p-8">
