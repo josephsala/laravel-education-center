@@ -5,14 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Assignment extends Model
+class Assigment extends Model
 {
-    public function course()
+    use HasFactory;
+
+    public function courses()
     {
-    return $this->belongsTo(Course::class);
+        return $this->belongsTo(Course::class);
     }
-    // Si permites envíos de asignaciones
+
     public function submissions()
     {
-    return $this->hasMany(AssignmentSubmission::class);
-    }}
+        return $this->hasMany(AssignmentSubmission::class);
+    }
+}

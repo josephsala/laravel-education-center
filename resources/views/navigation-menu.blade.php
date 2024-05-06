@@ -34,12 +34,6 @@
                 </div>
                 @endif
 
-                <!-- @if (Auth::user() && Auth::user()->isAdmin() || Auth::user()->isTeacher())
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link href="{{ route('course-management') }}" :active="request()->routeIs('course-management')">
-                        {{ __('Course Management') }}
-                    </x-nav-link>
-                @endif -->
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ms-6">
