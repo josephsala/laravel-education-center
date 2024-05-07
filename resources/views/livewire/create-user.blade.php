@@ -9,8 +9,8 @@
                 <option value="{{ $role->name }}">{{ $role->name }}</option>
             @endforeach
         </select>
-        <x-button-add>
+        <x-button>
             Create User
-        </x-button-add>
+        </x-button>
     </form>
 </div>

@@ -1,17 +1,14 @@
 <div>
-    <div class="fixed inset-0 bg-black bg-opacity-50 transition-opacity" aria-hidden="true"></div>
-    <div class="relative bg-white rounded-lg max-w-md p-6">
-        <div class="flex justify-between items-center border-b border-gray-200 pb-4 mb-4">
-            <h2 class="text-lg font-semibold">Borrar el usuario con el nombre: {{ $user->name }}</h2>
-        </div>
-        <div class="mb-6">
-            <p class="text-gray-700">Estas seguro de querer borrar el usuario?</p>
-        </div>
-        <div class="flex justify-end">
-            <button wire:click="delete"
-                class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 mr-2">Confirmar</button>
-            <button wire:click="closeModal"
-                class="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400">Cancelar</button>
+    <div class="flex justify-center items-center">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-1/3">
+            <h2 class="text-2xl font-semibold text-center">Delete User</h2>
+            <p class="text-center text-gray-500 mt-2">Are you sure you want to delete this user?</p>
+            <div class="flex justify-center items-center gap-4 mt-6">
+                <button wire:click="deleteUser({{ $userId }})"
+                    class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Yes</button>
+                <button wire:click="closeModal"
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">No</button>
+            </div>
         </div>
     </div>
 </div>
