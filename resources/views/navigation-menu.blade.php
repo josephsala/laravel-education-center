@@ -77,11 +77,7 @@
                             @else
                                 <button type="button"
                                     class="inline-flex gap-4 justify-center items-center text-start px-2 py-2 border border-transparent rounded-md bg-white">
-                                    <picture>
-                                        <source srcset="{{ asset('images/user.jpg') }}" type="image/png">
-                                        <img src="{{ asset('images/avatar.png') }}" alt="{{ Auth::user()->name }}"
-                                            class="w-14 rounded-full object-cover">
-                                    </picture>
+                                    
                                     <div class="flex flex-col">
                                         <p class="font-bold text-black">{{ Auth::user()->name }}
                                             ({{ ucfirst(Auth::user()->role) }})</p>

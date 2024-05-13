@@ -39,4 +39,6 @@ Route::middleware([
 
     // Support
     Route::get('/support')->name('support');
+
+
 });

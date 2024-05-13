@@ -30,11 +30,12 @@
             </ul>
 
             <ul class="flex flex-col gap-4 justify-center items-start">
-                <a href="#"
-                    class="{{ request()->routeIs('dashboard') ? 'text-red-400 white-gradient' : 'text-white hover:text-red-400' }} transform hover:pl-20 ease-in duration-200 w-full gradient-box flex items-center pl-14">
+                <a href="{{ route('profile.show') }}"
+                    class="{{ request()->routeIs('profile.show') ? 'text-red-600 white-gradient' : 'text-white hover:text-red-400' }} ease-in duration-200 w-full gradient-box flex items-center pl-14">
                     <li class="py-3 flex items-start gap-2">
                         <span>
-                            <i class="bx bx-cog text-2xl"></i>
+                            <i class="bx bx-user
+                            text-2xl"></i>
                         </span>
                         <span>Settings</span>
                     </li>
