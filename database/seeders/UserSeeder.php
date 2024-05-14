@@ -21,10 +21,10 @@ class UserSeeder extends Seeder
     private function createAdmin(): void
     {
         DB::table('users')->insert([
-            'name' => 'Admin',
+            'name' => 'Josep Miquel Sala',
             'role' => 'admin',
-            'email' => 'admin@monlau.com',
-            'password' => Hash::make('admin123'),
+            'email' => 'josep@monlau.com',
+            'password' => Hash::make('Monlau2021'),
             'created_at' => now(),
             'updated_at' => now()
         ]);
@@ -33,16 +33,9 @@ class UserSeeder extends Seeder
     private function createTeacher(): void
     {
         $teacher = [
-            'Ramón Aguilar',
-            'Amador Diaz',
-            'Josep Maria Herrera',
-            'Roberto Manca',
-            'Javier Salvador',
-            'Adrià Serrando',
-            'Carmen Quintás',
-            'Judith Lopez',
-            'Marta Sánchez',
-            'Jordi Sánchez',
+            'Carles Sanchez',
+            'Carlos Araujo',
+
         ];
 
         $teachers = [];
@@ -51,7 +44,7 @@ class UserSeeder extends Seeder
                 'name' => $teacher,
                 'role' => 'teacher',
                 'email' => strtolower(str_replace(' ', '', $teacher)) . '@monlau.com',
-                'password' => Hash::make('teacher123'),
+                'password' => Hash::make('Monlau2021'),
                 'created_at' => now(),
                 'updated_at' => now(),
             ];
@@ -63,29 +56,7 @@ class UserSeeder extends Seeder
     private function createStudent(): void
     {
         $student = [
-            'Lucas Romero',
-            'Martina García',
-            'Mateo Torres',
-            'Sofía Martínez',
-            'Diego Sánchez',
-            'Valeria López',
-            'Hugo Fernández',
-            'Daniela Rodríguez',
-            'Liam Ramírez',
-            'Alba Hernández',
-            'Álvaro Díaz',
-            'Isabella Cruz',
-            'Pablo Pérez',
-            'Sara Ortiz',
-            'Leo Jiménez',
-            'Noa Navarro',
-            'Enzo Ramos',
-            'Julia Gutiérrez',
-            'Oliver Gómez',
-            'Emma Morales',
-            'Thiago Herrera',
-            'Mía Ruiz',
-            'Manuel Méndez'
+            'Albert Soriano',
         ];
 
         $students = [];
@@ -94,7 +65,7 @@ class UserSeeder extends Seeder
                 'name' => $student,
                 'role' => 'student',
                 'email' => strtolower(str_replace(' ', '', $student)) . '@monlau.com',
-                'password' => Hash::make('student123'),
+                'password' => Hash::make('Monlau2021'),
                 'created_at' => now(),
                 'updated_at' => now(),
             ];

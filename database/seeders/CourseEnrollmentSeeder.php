@@ -13,7 +13,7 @@ class CourseEnrollmentSeeder extends Seeder
     public function run(): void
     {
         DB::table('course_enrollments')->insert([
-            'user_id' => 10,
+            'user_id' => 4,
             'course_id' => 1,
             'enrollment_date' => now(),
             'status' => 'enrolled',

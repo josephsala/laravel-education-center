@@ -26,8 +26,21 @@
                             <span>User Management</span>
                         </li>
                     </a>
+
+                    <a href="{{ route('courses') }}"
+                        class="{{ request()->routeIs('course-management') ? 'text-red-600 white-gradient' : 'text-white hover:text-red-400' }} ease-in duration-200 w-full gradient-box flex items-center pl-14">
+                        <li class="py-3 flex items-start gap-2">
+                            <span>
+                                <i class="bx bx-book
+                                text-2xl"></i>
+                            </span>
+                            <span>Courses Management</span>
+                        </li>
+                    </a>
                 @endif
+
             </ul>
+       
 
             <ul class="flex flex-col gap-4 justify-center items-start">
                 <a href="{{ route('profile.show') }}"
