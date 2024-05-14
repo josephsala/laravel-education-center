@@ -921,16 +921,6 @@
                         <a href="{{ url('/dashboard') }}" class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]">
                             Dashboard
                         </a>
-                        @else
-                        <!-- <a href="{{ route('login') }}" class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]">
-                            Entrar
-                        </a> -->
-
-                        <!-- @if (Route::has('register'))
-                        <a href="{{ route('register') }}" class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]">
-                            Register
-                        </a> -->
-                        @endif
                         @endauth
                     </nav>
                     @endif
@@ -940,7 +930,7 @@
                     <div class="bg-gray-800 py-6 px-8 text-black">
                         <h1 class="text-4xl font-extrabold leading-tight">¡Bienvenido al Portal de Aprendizaje!</h1>
                         <p class="mt-2 text-lg">Accede a recursos educativos innovadores para potenciar tu enseñanza.</p>
-                    </div>                    
+                    </div>
                     <!-- Cuerpo -->
                     <div class="p-8">
                         <h2 class="text-2xl font-bold text-gray-800">¿Qué deseas hacer?</h2>
