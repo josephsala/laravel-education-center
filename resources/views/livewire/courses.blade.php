@@ -48,7 +48,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
                 @foreach($allCourses as $course)
                     <div class="relative">
-                        <a href="{{ route('courses.course-details', ['courseId' => $course->id]) }}" title="{{ $course->title }}">
+                        <a href="{{ route('course-details', ['courseId' => $course->id]) }}" title="{{ $course->title }}">
                             <div class="bg-white rounded-lg shadow-lg p-6">
                                 <h2 class="text-xl font-semibold mb-2 truncate">{{ $course->title }}</h2>
                                 <p class="text-gray-600 truncate" title="{{ $course->description }}">{{ $course->description }}</p>

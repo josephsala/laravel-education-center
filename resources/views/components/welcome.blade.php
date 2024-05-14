@@ -1,8 +1,7 @@
 @section('title', 'Dashboard')
 <div class="bg-app">
-    <div class="container mx-auto">
         <div class="flex justify-center items-center h-screen">
-            <div class="w-full max-w-lg bg-white shadow-md rounded px-8 pt-7 pb-8">
+            <div class="w-full max-w-lg bg-white shadow-md rounded px-10 pt-8 pb-8">
                 <h1 class="text-2xl mb-4">Bienveido a EduNexus</h1>
                 <h2 class="text-lg mb-4">¡Hola, {{ Auth::user()->name }}!</h2> 
                 @if (auth()->user()->isAdmin())
@@ -17,6 +16,6 @@
                 <br>
                 <p class="text-gray-700 text-base">Para comenzar, selecciona un curso de la lista de la izquierda.</p>
             </div>
-        </div>
+        
     </div>
 </div>

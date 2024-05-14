@@ -21,7 +21,8 @@ Route::middleware([
    // Courses
     Route::get('/courses', Courses::class)->name('courses');
    // Course Details
-    Route::get('/courses/{course}', CourseDetails::class)->name('course-details');
+   Route::get('/courses/{courseId}', CourseDetails::class)->name('course-details');
+
     // Calendar
     Route::get('/calendar')->name('calendar');
 

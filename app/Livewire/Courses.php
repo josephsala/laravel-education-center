@@ -139,6 +139,6 @@ class Courses extends Component
 
     public function render()
     {
-        return view('livewire.courses.courses');
+        return view('livewire.courses');
     }
 }
